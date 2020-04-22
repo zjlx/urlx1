@@ -45,6 +45,12 @@ def sucurinet(urlx):
     score = re.findall("Site issues detected", mystr)
     print("Issues detected: ", score)
 
+
+def talosintelligence(urlx):
+    talosurl = ("https://talosintelligence.com/reputation_center/lookup?search=" + urlx)
+    print("TALOSINTELLIGENCE.COM: " + talosurl)
+
+
 introscreen()
 urlx = input("  Enter a domain/url/ip address to get the analysis results:")
 print("  You entered: ", urlx + "\n")
@@ -52,3 +58,4 @@ print("  You entered: ", urlx + "\n")
 urlvoid(urlx)
 safewebnorton(urlx)
 sucurinet(urlx)
+talosintelligence(urlx)
