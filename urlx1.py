@@ -76,10 +76,29 @@ def hashddcom(urlx):
     print("HASHDD.COM: " + hashddcomurl)
 
 
-#http://www.malwaredomainlist.com/mdl.php?search=testing.com&colsearch=All&quantity=50
+
 def malwaredomainlistcom(urlx):
     malwaredomainlistcomurl = ("http://www.malwaredomainlist.com/mdl.php?search=" + urlx + "&colsearch=All&quantity=50")
     print("MALWAREDOMAINLIST.COM: " + malwaredomainlistcomurl)
+
+
+
+def reputationauthorityorg(urlx):
+    reputationauthorityorgurl = ("http://www.reputationauthority.org/domain_lookup.php?ip=" + urlx + "&ipvalid=&Submit.x=0&Submit.y=0")
+    print("REPUTATIONAUTHORIY.ORG: " + reputationauthorityorgurl)
+
+
+
+def scamadvisorcom(urlx):
+    scamadvisorcomurl = ("https://www.scamadviser.com/check-website/" + urlx)
+    print("HASHDD.COM: " + scamadvisorcomurl)
+
+
+# https://securitytrails.com/domain/google.com/dns
+def securitytrailscom(urlx):
+    securitytrailscomurl = ("https://securitytrails.com/domain/" + urlx + "/dns")
+    print("SECURITYTRAILS.COM : " + securitytrailscomurl)
+
 
 
 
@@ -96,4 +115,6 @@ abuseipdb(urlx)
 transparencyreportgooglecom(urlx)
 hashddcom(urlx)
 malwaredomainlistcom(urlx)
-
+reputationauthorityorg(urlx)
+scamadvisorcom(urlx)
+securitytrailscom(urlx)

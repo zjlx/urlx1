@@ -16,3 +16,6 @@ Currently it gives the results from the following repuation analysis sites:
 7. transparencyreport.google.com (Link only)
 8. hashdd.com (Link only)
 9. malwaredomainlist.com (Link only)
+10. reputationauthority.com
+11. scamadvisor.com
+12. securitytrails.com
