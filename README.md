@@ -9,7 +9,8 @@ Currently it gives the results from the following repuation analysis sites:
 
 1. urlvoid.com
 2. safeweb.norton.com
-3. sitecheck.sucuri.net
+3. sitecheck.sucuri.net (Link only)
 4. talosintelligence.com (Link only)
-5. threatminer.org
-6. abuseipdb.com
+5. threatminer.org (Link only)
+6. abuseipdb.com (Link only)
+7. transparencyreport.google.com (Link only)

@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
 
+# This app can be used to put one domain main and get the reputation from the different sites that are mentioned
+# in the readme.md.
+# Save some time by not having to go to different sites and pasting in the domain name.
 
 from urllib import request
 import urllib
@@ -9,8 +12,8 @@ import re
 def introscreen():
     print("         ***   URL ANALYSIS SCRIPT FOR CYBER ANALYSTS   ***\n")
     print("         This program provides analysis information via the following websites.\n"
-          "         [ URLVoid ][ Norton Safeweb ][ TALOSIntelligence ][ ThreatMiner ][ AbuseIPDB ]\n"
-          "         Also displays the scraped desired text in the output.\n\n")
+          "         [ URLVoid ][ Norton Safeweb ][ TALOSIntelligence ][ ThreatMiner ][ AbuseIPDB ]\n\n")
+
 
 def urlvoid(urlx):
     urlvoidurl = ("https://urlvoid.com/scan/" + urlx + "/")
@@ -38,17 +41,34 @@ def safewebnorton(urlx):
 def sucurinet(urlx):
     sucurineturl = ("https://sitecheck.sucuri.net/results/" + urlx + "/")
     print("SITECHECK.SUCURI.NET: " + sucurineturl)
-    fp = urllib.request.urlopen(sucurineturl)  # this is the connection to the page?
-    sucuribytes = fp.read()
-    mystr = sucuribytes.decode("utf8")
-    fp.close()
-    score = re.findall("Site issues detected", mystr)
-    print("Issues detected: ", score)
+    # fp = urllib.request.urlopen(sucurineturl)  # this is the connection to the page?
+    # sucuribytes = fp.read()
+    # mystr = sucuribytes.decode("utf8")
+    # fp.close()
+    # score = re.findall("Site issues detected", mystr)
+    # print("Issues detected: ", score)
 
 
 def talosintelligence(urlx):
     talosurl = ("https://talosintelligence.com/reputation_center/lookup?search=" + urlx)
     print("TALOSINTELLIGENCE.COM: " + talosurl)
+
+
+def threatminerorg(urlx):
+    threatminerurl = ("https://www.threatminer.org/domain.php?q=" + urlx)
+    print("THREATMINER.ORG: " + threatminerurl)
+    #webbrowser.open(threatminerurl)
+
+
+def abuseipdb(urlx):
+    abuseipdburl = ("https://www.abuseipdb.com/check/" + urlx)
+    print("ABUSEIPDB.COM: " + abuseipdburl)
+    # webbrowser.open(abuseipdburl)
+
+
+def transparencyreportgooglecom(urlx):
+    transparencyreportgooglecomurl = ("https://transparencyreport.google.com/safe-browsing/search?url=" + urlx)
+    print("TRANSPARENCYREPORT.GOOGLE.COM: " + transparencyreportgooglecomurl)
 
 
 introscreen()
@@ -59,3 +79,7 @@ urlvoid(urlx)
 safewebnorton(urlx)
 sucurinet(urlx)
 talosintelligence(urlx)
+threatminerorg(urlx)
+abuseipdb(urlx)
+transparencyreportgooglecom(urlx)
+
