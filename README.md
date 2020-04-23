@@ -15,3 +15,4 @@ Currently it gives the results from the following repuation analysis sites:
 6. abuseipdb.com (Link only)
 7. transparencyreport.google.com (Link only)
 8. hashdd.com (Link only)
+9. malwaredomainlist.com (Link only)

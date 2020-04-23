@@ -76,6 +76,13 @@ def hashddcom(urlx):
     print("HASHDD.COM: " + hashddcomurl)
 
 
+#http://www.malwaredomainlist.com/mdl.php?search=testing.com&colsearch=All&quantity=50
+def malwaredomainlistcom(urlx):
+    malwaredomainlistcomurl = ("http://www.malwaredomainlist.com/mdl.php?search=" + urlx + "&colsearch=All&quantity=50")
+    print("MALWAREDOMAINLIST.COM: " + malwaredomainlistcomurl)
+
+
+
 introscreen()
 urlx = input("  Enter a domain/url/ip address to get the analysis results:")
 print("  You entered: ", urlx + "\n")
@@ -88,4 +95,5 @@ threatminerorg(urlx)
 abuseipdb(urlx)
 transparencyreportgooglecom(urlx)
 hashddcom(urlx)
+malwaredomainlistcom(urlx)
 
