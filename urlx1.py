@@ -71,6 +71,11 @@ def transparencyreportgooglecom(urlx):
     print("TRANSPARENCYREPORT.GOOGLE.COM: " + transparencyreportgooglecomurl)
 
 
+def hashddcom(urlx):
+    hashddcomurl = ("https://hashdd.com/i/" + urlx)
+    print("HASHDD.COM: " + hashddcomurl)
+
+
 introscreen()
 urlx = input("  Enter a domain/url/ip address to get the analysis results:")
 print("  You entered: ", urlx + "\n")
@@ -82,4 +87,5 @@ talosintelligence(urlx)
 threatminerorg(urlx)
 abuseipdb(urlx)
 transparencyreportgooglecom(urlx)
+hashddcom(urlx)
 
