@@ -10,32 +10,29 @@ import re
 
 
 def introscreen():
-    print("         ***   URL ANALYSIS SCRIPT FOR CYBER ANALYSTS   ***\n")
-    print("         This program provides analysis information via the following websites.\n"
-          "         [ URLVoid ][ Norton Safeweb ][ TALOSIntelligence ][ ThreatMiner ][ AbuseIPDB ]\n\n")
+    print("         ***   URL ANALYSIS SCRIPT FOR CYBER ANALYSTS   ***")
 
 
 def urlvoid(urlx):
     urlvoidurl = ("https://urlvoid.com/scan/" + urlx + "/")
-    #webbrowser.open(urlvoidurl)  # this works but only if the scan for a certain website has been done before.
-    print("URLVOID.COM: " + urlvoidurl)
     fp = urllib.request.urlopen(urlvoidurl)  # this is the connection to the page?
     mybytes = fp.read()
     mystr = mybytes.decode("utf8")
     fp.close()
     score = re.findall("[0-9]{1,2}/[0-9]{2}", mystr)
-    print("Score: ", score)
+    print("URLVOID.COM: " + urlvoidurl + "Score: ", score)
 
 
 def safewebnorton(urlx):
     safewebnortonurl = ("https://safeweb.norton.com/report/show?url=" + urlx)
-    print("SAFEWEB.NORTON.COM: " + safewebnortonurl)
+    # print("SAFEWEB.NORTON.COM: " + safewebnortonurl)
     fp = urllib.request.urlopen(safewebnortonurl)  # this is the connection to the page?
     mybytes = fp.read()
     mystr = mybytes.decode("utf8")
     fp.close()
     verdict = re.findall("SAFE|CAUTION", mystr)
-    print(verdict)
+    verdict = str(verdict) #converitng verdict from list to string.
+    print("SAFEWEB.NORTON.COM: " + safewebnortonurl + " Verdict: " + verdict)
 
 
 def sucurinet(urlx):
@@ -94,7 +91,7 @@ def scamadvisorcom(urlx):
     print("HASHDD.COM: " + scamadvisorcomurl)
 
 
-# https://securitytrails.com/domain/google.com/dns
+
 def securitytrailscom(urlx):
     securitytrailscomurl = ("https://securitytrails.com/domain/" + urlx + "/dns")
     print("SECURITYTRAILS.COM : " + securitytrailscomurl)
@@ -103,7 +100,7 @@ def securitytrailscom(urlx):
 
 
 introscreen()
-urlx = input("  Enter a domain/url/ip address to get the analysis results:")
+urlx = input("  Enter a domain address to get the analysis results: ")
 print("  You entered: ", urlx + "\n")
 
 urlvoid(urlx)

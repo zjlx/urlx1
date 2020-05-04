@@ -1,5 +1,5 @@
 
-## urlx.py is a file that will give you the urls for online analysis reports. 
+## urlx.py is a file that will give you the urls for online analysis reports/links. 
 ### check it out 
 
 
