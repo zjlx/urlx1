@@ -21,6 +21,7 @@ def urlvoid(urlx):
     fp.close()
     score = re.findall("[0-9]{1,2}/[0-9]{2}", mystr)
     print("URLVOID.COM: " + urlvoidurl + "Score: ", score)
+    print()
 
 
 def safewebnorton(urlx):
@@ -33,6 +34,7 @@ def safewebnorton(urlx):
     verdict = re.findall("SAFE|CAUTION", mystr)
     verdict = str(verdict) #converitng verdict from list to string.
     print("SAFEWEB.NORTON.COM: " + safewebnortonurl + " Verdict: " + verdict)
+    print()
 
 
 def sucurinet(urlx):
@@ -44,63 +46,71 @@ def sucurinet(urlx):
     # fp.close()
     # score = re.findall("Site issues detected", mystr)
     # print("Issues detected: ", score)
+    print()
 
 
 def talosintelligence(urlx):
     talosurl = ("https://talosintelligence.com/reputation_center/lookup?search=" + urlx)
     print("TALOSINTELLIGENCE.COM: " + talosurl)
+    print()
 
 
 def threatminerorg(urlx):
     threatminerurl = ("https://www.threatminer.org/domain.php?q=" + urlx)
     print("THREATMINER.ORG: " + threatminerurl)
     #webbrowser.open(threatminerurl)
+    print()
 
 
 def abuseipdb(urlx):
     abuseipdburl = ("https://www.abuseipdb.com/check/" + urlx)
     print("ABUSEIPDB.COM: " + abuseipdburl)
     # webbrowser.open(abuseipdburl)
+    print()
+
 
 
 def transparencyreportgooglecom(urlx):
     transparencyreportgooglecomurl = ("https://transparencyreport.google.com/safe-browsing/search?url=" + urlx)
     print("TRANSPARENCYREPORT.GOOGLE.COM: " + transparencyreportgooglecomurl)
+    print()
 
 
 def hashddcom(urlx):
     hashddcomurl = ("https://hashdd.com/i/" + urlx)
     print("HASHDD.COM: " + hashddcomurl)
+    print()
 
 
 
 def malwaredomainlistcom(urlx):
     malwaredomainlistcomurl = ("http://www.malwaredomainlist.com/mdl.php?search=" + urlx + "&colsearch=All&quantity=50")
     print("MALWAREDOMAINLIST.COM: " + malwaredomainlistcomurl)
+    pritn()
 
 
 
 def reputationauthorityorg(urlx):
     reputationauthorityorgurl = ("http://www.reputationauthority.org/domain_lookup.php?ip=" + urlx + "&ipvalid=&Submit.x=0&Submit.y=0")
     print("REPUTATIONAUTHORIY.ORG: " + reputationauthorityorgurl)
+    print()
 
 
 
 def scamadvisorcom(urlx):
     scamadvisorcomurl = ("https://www.scamadviser.com/check-website/" + urlx)
     print("HASHDD.COM: " + scamadvisorcomurl)
+    print()
 
 
 
 def securitytrailscom(urlx):
     securitytrailscomurl = ("https://securitytrails.com/domain/" + urlx + "/dns")
     print("SECURITYTRAILS.COM : " + securitytrailscomurl)
-
-
-
+    print()    
 
 introscreen()
-urlx = input("  Enter a domain address to get the analysis results: ")
+urlx = input("\n  Enter a domain address to get the analysis results: ")
 print("  You entered: ", urlx + "\n")
 
 urlvoid(urlx)
@@ -111,7 +121,7 @@ threatminerorg(urlx)
 abuseipdb(urlx)
 transparencyreportgooglecom(urlx)
 hashddcom(urlx)
-malwaredomainlistcom(urlx)
+# malwaredomainlistcom(urlx)
 reputationauthorityorg(urlx)
 scamadvisorcom(urlx)
 securitytrailscom(urlx)
